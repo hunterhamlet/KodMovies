@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		E05D757327A2480400A232BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D757227A2480400A232BD /* AppDelegate.swift */; };
 		E05D757527A2480400A232BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D757427A2480400A232BD /* SceneDelegate.swift */; };
-		E05D757727A2480400A232BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D757627A2480400A232BD /* ViewController.swift */; };
+		E05D757727A2480400A232BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D757627A2480400A232BD /* LoginViewController.swift */; };
 		E05D757A27A2480400A232BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05D757827A2480400A232BD /* Main.storyboard */; };
 		E05D757C27A2480600A232BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05D757B27A2480600A232BD /* Assets.xcassets */; };
 		E05D757F27A2480600A232BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05D757D27A2480600A232BD /* LaunchScreen.storyboard */; };
+		E05D758827A24BE400A232BD /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D758727A24BE400A232BD /* UIExtensions.swift */; };
+		E05D758A27A259E900A232BD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D758927A259E900A232BD /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E05D756F27A2480400A232BD /* KodMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KodMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D757227A2480400A232BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05D757427A2480400A232BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E05D757627A2480400A232BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E05D757627A2480400A232BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E05D757927A2480400A232BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E05D757B27A2480600A232BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05D757E27A2480600A232BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05D758027A2480600A232BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E05D758727A24BE400A232BD /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		E05D758927A259E900A232BD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		E05D757127A2480400A232BD /* KodMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E05D758627A24BAE00A232BD /* Util */,
 				E05D757227A2480400A232BD /* AppDelegate.swift */,
 				E05D757427A2480400A232BD /* SceneDelegate.swift */,
-				E05D757627A2480400A232BD /* ViewController.swift */,
+				E05D757627A2480400A232BD /* LoginViewController.swift */,
 				E05D757827A2480400A232BD /* Main.storyboard */,
 				E05D757B27A2480600A232BD /* Assets.xcassets */,
 				E05D757D27A2480600A232BD /* LaunchScreen.storyboard */,
 				E05D758027A2480600A232BD /* Info.plist */,
+				E05D758927A259E900A232BD /* ListViewController.swift */,
 			);
 			path = KodMovies;
+			sourceTree = "<group>";
+		};
+		E05D758627A24BAE00A232BD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E05D758727A24BE400A232BD /* UIExtensions.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05D757727A2480400A232BD /* ViewController.swift in Sources */,
+				E05D757727A2480400A232BD /* LoginViewController.swift in Sources */,
 				E05D757327A2480400A232BD /* AppDelegate.swift in Sources */,
 				E05D757527A2480400A232BD /* SceneDelegate.swift in Sources */,
+				E05D758A27A259E900A232BD /* ListViewController.swift in Sources */,
+				E05D758827A24BE400A232BD /* UIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
