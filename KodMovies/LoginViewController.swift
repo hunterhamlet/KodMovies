@@ -65,9 +65,9 @@ class LoginViewController: UIViewController {
         
         
         //Aquí va el API
-        let movieUrl = "API"
+        let movieUrl = "https://betterimdbot.herokuapp.com/"
         
-        let urlString = "\(movieUrl)&q=\(String(busqueda))"
+        let urlString = "\(movieUrl)?q=\(String(busqueda))"
             
         // Hacemos los 4 pasos
                 
