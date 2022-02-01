@@ -86,7 +86,13 @@ class LoginViewController: UIViewController {
                 }
                 if let safeData = data {
                     let dataString = String(data: safeData, encoding: .utf8)
-                    print(dataString!)
+                  //  print(dataString!)
+                    
+                    if  let movie = self.parseJSON(movieData: safeData) {
+                        //delegate?.didUpdateWeather(self, movie: movie)
+                       // var stringMovie = String(movie)
+                    //   print("Objeto parseado + \(movie)")
+                    }
                 }
             }
             
@@ -94,6 +100,57 @@ class LoginViewController: UIViewController {
             task.resume()
         }
     }
+    
+    func parseJSON(movieData: Data) -> MovieModel? {
+        let decoder = JSONDecoder()
+        do{
+            
+            let decodedData = try decoder.decode(MovieData.self, from: movieData)
+            
+            let title = decodedData.title
+            let year = decodedData.year
+            let poster = decodedData.poster
+            let duration = decodedData.duration
+            let small_poster = decodedData.small_poster
+            let description = decodedData.description
+            
+            
+            let movie = MovieModel(title: title, year: year, poster: poster, duration: duration, small_poster: small_poster, description: description)
+            print(movie.poster)
+            return movie
+            
 
-}
+        } catch {
+            print(error)
+            return nil
+            }
+        }
+    
+//    func parseToArrayJ (movieData: Data) -> [Any]?{
+//        let decoder = JSONDecoder()
+//        do{
+//
+//            let decodedData = try decoder.decode([T].self, from: movieData)
+//
+//            let title = decodedData.title
+//            let year = decodedData.year
+//            let poster = decodedData.poster
+//            let duration = decodedData.duration
+//            let small_poster = decodedData.small_poster
+//            let description = decodedData.description
+//
+//
+//            let movie = MovieModel(title: title, year: year, poster: poster, duration: duration, small_poster: small_poster, description: description)
+//            return movie
+//
+//
+//        } catch {
+//            print(error)
+//            return nil
+//            }
+//
+//    }
+
+    }
+
 
